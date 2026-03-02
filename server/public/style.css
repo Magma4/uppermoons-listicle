@@ -1,11 +1,5 @@
-/* =========================================================
-   Demon Slayer • Upper Moons
-   Dark theme  ·  PicoCSS compatible  ·  vanilla CSS
-   ========================================================= */
-
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;900&display=swap');
 
-/* ---- Base / background ---- */
 :root {
     --max-width: 1140px;
     --text: #e9ecff;
@@ -37,7 +31,6 @@ body {
     margin: 0;
 }
 
-/* Keep Pico from forcing weird margins */
 header,
 main,
 section {
@@ -63,9 +56,6 @@ a:hover {
     color: #adb8ff;
 }
 
-/* ========================================
-   Header (JS-generated)
-   ======================================== */
 header {
     padding: 1rem 0;
     position: relative;
@@ -111,9 +101,6 @@ header {
     transform: translateY(-1px);
 }
 
-/* ========================================
-   Hero section
-   ======================================== */
 .hero {
     height: 520px;
     width: 100%;
@@ -196,9 +183,6 @@ header {
     color: #ffffff;
 }
 
-/* ========================================
-   Main content
-   ======================================== */
 #main-content {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -213,9 +197,6 @@ header {
     letter-spacing: 0.5px;
 }
 
-/* ========================================
-   Gallery grid — all image tile cards
-   ======================================== */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -234,7 +215,6 @@ header {
     }
 }
 
-/* ---- Image tile card ---- */
 .moon-card {
     position: relative;
     overflow: hidden;
@@ -266,7 +246,6 @@ header {
     transform: scale(1.08);
 }
 
-/* Dark gradient overlay */
 .moon-card::after {
     content: "";
     position: absolute;
@@ -287,7 +266,6 @@ header {
             rgba(0, 0, 0, 0.75) 100%);
 }
 
-/* Text overlay */
 .card-overlay {
     position: absolute;
     inset: 0;
@@ -334,9 +312,6 @@ header {
     font-style: italic;
 }
 
-/* ========================================
-   Detail page
-   ======================================== */
 .back-link {
     display: inline-flex;
     align-items: center;
@@ -453,9 +428,6 @@ header {
     font-size: 1.05rem;
 }
 
-/* ========================================
-   404 / Error page
-   ======================================== */
 .error-page {
     display: flex;
     justify-content: center;
@@ -499,7 +471,6 @@ header {
     color: var(--muted);
 }
 
-/* ---- Pico overrides ---- */
 button,
 [role="button"] {
     box-shadow: none;

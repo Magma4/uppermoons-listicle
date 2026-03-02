@@ -35,17 +35,17 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-https://github.com/Magma4/uppermoons-listicle/blob/main/walkthrough.webp
+<img src='walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with Antigravity browser recorder
+GIF created with [Kap](https://getkap.co/) for macOS
 
 ## Notes
 
-The main challenge was ensuring the data file and image filenames matched correctly (case sensitivity issues with `Kokushibo.webp` vs `kokushibo.webp`). Also had to remove an auto-augment function that was creating phantom card entries from mismatched image filenames in the public directory.
+The main challenge was removing an auto-augment function that was creating phantom card entries from mismatched image filenames in the public directory.
 
 ## License
 
-Copyright 2026 Ray
+Copyright 2026 Raymond Frimpong Amoateng
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 

@@ -39,7 +39,7 @@ const upperMoonData = [
     abilityType: "Emotion Manifestation (multiple forms)",
     arc: "Swordsmith Village",
     threatLevel: "Very High",
-    image: "/images/hatengu.webp", // matches your actual file name
+    image: "/images/hatengu.webp",
     description:
       "Upper Rank Four. A deceptive demon whose abilities split into multiple emotion-based forms, making him difficult to track and even harder to finish."
   },

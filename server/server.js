@@ -16,7 +16,6 @@ app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "public/index.html"));
 });
 
-// 404 catch-all — must be the last route
 app.use((req, res) => {
   res.status(404).sendFile(path.resolve(__dirname, "public/404.html"));
 });
