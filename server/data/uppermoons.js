@@ -3,11 +3,12 @@ const upperMoonData = [
     slug: "kokushibo",
     name: "Kokushibo",
     upperRank: 1,
-    abilityType: "Swordsmanship + Blood Demon Art",
+    abilityType: "Moon Breathing + Blood Demon Art",
     arc: "Infinity Castle",
     threatLevel: "Extreme",
-    image: "/public/images/kokushibo.png",
-    description: "Upper Rank One. The strongest Upper Moon and a terrifying swordsman."
+    image: "/images/Kokushibo.webp",
+    description:
+      "Upper Rank One. The strongest Upper Moon—an elite swordsman whose Moon Breathing techniques are amplified by demonic regeneration and lethal ranged slashes."
   },
   {
     slug: "doma",
@@ -16,49 +17,54 @@ const upperMoonData = [
     abilityType: "Ice-based Blood Demon Art",
     arc: "Infinity Castle",
     threatLevel: "Very High",
-    image: "/public/images/doma.png",
-    description: "Upper Rank Two. Charismatic and cruel with overwhelming abilities."
+    image: "/images/doma.webp",
+    description:
+      "Upper Rank Two. A charismatic and cruel demon who overwhelms opponents with freezing techniques, area control, and relentless pressure."
   },
   {
     slug: "akaza",
     name: "Akaza",
     upperRank: 3,
-    abilityType: "Martial Arts Combat",
+    abilityType: "Martial Arts (Destructive Death) + Blood Demon Art",
     arc: "Mugen Train / Infinity Castle",
     threatLevel: "Very High",
-    image: "/public/images/akaza.png",
-    description: "Upper Rank Three. A relentless fighter who thrives in direct combat."
+    image: "/images/akaza.webp",
+    description:
+      "Upper Rank Three. A relentless close-range fighter who specializes in high-speed hand-to-hand combat and adapts quickly to an opponent’s rhythm and strength."
   },
   {
     slug: "hantengu",
     name: "Hantengu",
     upperRank: 4,
-    abilityType: "Emotion Manifestation",
+    abilityType: "Emotion Manifestation (multiple forms)",
     arc: "Swordsmith Village",
     threatLevel: "Very High",
-    image: "/public/images/hantengu.png",
-    description: "Upper Rank Four. Deceptive and difficult to defeat."
+    image: "/images/hatengu.webp", // matches your actual file name
+    description:
+      "Upper Rank Four. A deceptive demon whose abilities split into multiple emotion-based forms, making him difficult to track and even harder to finish."
   },
   {
     slug: "gyokko",
     name: "Gyokko",
     upperRank: 5,
-    abilityType: "Summons / Battlefield Tricks",
+    abilityType: "Summons + Battlefield Manipulation",
     arc: "Swordsmith Village",
     threatLevel: "High",
-    image: "/public/images/gyokko.png",
-    description: "Upper Rank Five. Unpredictable attacks and warped creations."
+    image: "/images/gyokko.webp",
+    description:
+      "Upper Rank Five. An unpredictable demon who uses warped creations and surprise attacks to disrupt the battlefield and force opponents into mistakes."
   },
   {
     slug: "gyutaro-daki",
     name: "Gyutaro & Daki",
     upperRank: 6,
-    abilityType: "Dual Threat / Coordination",
+    abilityType: "Dual Threat Coordination + Blood Demon Art",
     arc: "Entertainment District",
     threatLevel: "High",
-    image: "/public/images/upper6.png",
-    description: "Upper Rank Six. A deadly pair that requires careful strategy to defeat."
-  }
+    image: "/images/gyutaro.webp",
+    description:
+      "Upper Rank Six. A deadly pair that fights as a coordinated unit, applying pressure from multiple angles—victory requires dealing with both threats correctly."
+  },
 ];
 
 export default upperMoonData;

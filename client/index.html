@@ -1,19 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Upper Moons Listicle</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demon Slayer • Upper Moons</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header></header>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-    <link rel="stylesheet" href="/style.css">
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="hero-panel">
+        <h1 class="hero-title">DEMON SLAYER</h1>
+        <p class="hero-subtitle">Upper Moons database — click “All Upper Moons” to explore.</p>
+        <button id="scroll-btn" class="hero-btn">ALL UPPER MOONS</button>
+      </div>
+    </div>
+  </section>
 
-    <script defer src="/public/scripts/header.js"></script>
-    <script defer src="/public/scripts/uppermoons.js"></script>
-  </head>
+  <main id="main-content" class="container">
+    <section class="gallery-wrap">
+      <h2 class="section-title">Upper Moons</h2>
+      <div id="cards-grid" class="cards-grid"></div>
+    </section>
+  </main>
 
-  <body>
-    <header></header>
-    <main id="main-content" class="container"></main>
-  </body>
-</html>
+  <script type="module" src="/scripts/header.js"></script>
+  <script type="module" src="/scripts/uppermoons.js"></script>
+</body>

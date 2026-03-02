@@ -1,0 +1,506 @@
+/* =========================================================
+   Demon Slayer • Upper Moons
+   Dark theme  ·  PicoCSS compatible  ·  vanilla CSS
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;900&display=swap');
+
+/* ---- Base / background ---- */
+:root {
+    --max-width: 1140px;
+    --text: #e9ecff;
+    --muted: rgba(233, 236, 255, 0.8);
+    --glass: rgba(10, 16, 30, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.10);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    --accent: #8b9cf7;
+    --accent-glow: rgba(139, 156, 247, 0.25);
+    --crimson: #e74c6f;
+    --crimson-glow: rgba(231, 76, 111, 0.2);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background:
+        radial-gradient(ellipse 1200px 600px at 50% 0%, rgba(60, 40, 120, 0.3), transparent 60%),
+        radial-gradient(ellipse 800px 400px at 80% 100%, rgba(140, 40, 60, 0.15), transparent 50%),
+        linear-gradient(180deg, #060c1f, #0a1128);
+    min-height: 100vh;
+    color: var(--text);
+    margin: 0;
+}
+
+/* Keep Pico from forcing weird margins */
+header,
+main,
+section {
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Bebas Neue', 'Inter', sans-serif;
+    letter-spacing: 1.5px;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #adb8ff;
+}
+
+/* ========================================
+   Header (JS-generated)
+   ======================================== */
+header {
+    padding: 1rem 0;
+    position: relative;
+    z-index: 10;
+    background: rgba(6, 12, 31, 0.6);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.header-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.app-title {
+    margin: 0;
+    color: var(--text);
+    font-size: 1.15rem;
+    letter-spacing: 0.5px;
+    font-weight: 800;
+}
+
+.home-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--text);
+    padding: 0.6rem 1.1rem;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 180ms ease;
+}
+
+.home-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+}
+
+/* ========================================
+   Hero section
+   ======================================== */
+.hero {
+    height: 520px;
+    width: 100%;
+    margin-bottom: 2.5rem;
+    background-image: url("/images/hero2.webp");
+    background-size: cover;
+    background-position: center 30%;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(6, 12, 31, 0.3) 0%, rgba(6, 12, 31, 0.7) 55%),
+        linear-gradient(180deg, transparent 60%, rgba(6, 12, 31, 0.9) 100%);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2.5rem;
+}
+
+.hero-panel {
+    width: min(500px, 90vw);
+    background: rgba(10, 17, 40, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2.5rem;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
+.hero-title {
+    margin: 0 0 0.25rem;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    letter-spacing: 3px;
+    color: #ffffff;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.hero-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--crimson), var(--accent));
+    border-radius: 2px;
+    margin-top: 0.75rem;
+}
+
+.hero-subtitle {
+    margin: 1rem 0 1.5rem;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.hero-btn {
+    background: linear-gradient(135deg, var(--crimson), #c0392b);
+    border: none;
+    color: #ffffff;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    padding: 0.85rem 1.6rem;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9rem;
+    transition: all 200ms ease;
+    box-shadow: 0 4px 20px var(--crimson-glow);
+}
+
+.hero-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(231, 76, 111, 0.4);
+    color: #ffffff;
+}
+
+/* ========================================
+   Main content
+   ======================================== */
+#main-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+}
+
+.section-title {
+    margin: 0 0 1.5rem;
+    font-size: 1.7rem;
+    color: var(--text);
+    font-weight: 900;
+    letter-spacing: 0.5px;
+}
+
+/* ========================================
+   Gallery grid — all image tile cards
+   ======================================== */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---- Image tile card ---- */
+.moon-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    height: 340px;
+    border: 1px solid var(--card-border);
+    box-shadow: var(--shadow);
+    background: rgba(255, 255, 255, 0.03);
+    text-decoration: none;
+    display: block;
+    transition: all 250ms ease;
+}
+
+.moon-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 30px var(--accent-glow);
+    border-color: rgba(139, 156, 247, 0.2);
+}
+
+.moon-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 400ms ease;
+}
+
+.moon-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Dark gradient overlay */
+.moon-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.0) 0%,
+            rgba(0, 0, 0, 0.1) 40%,
+            rgba(0, 0, 0, 0.85) 100%);
+    z-index: 1;
+    pointer-events: none;
+    transition: background 250ms ease;
+}
+
+.moon-card:hover::after {
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.0) 0%,
+            rgba(0, 0, 0, 0.05) 30%,
+            rgba(0, 0, 0, 0.75) 100%);
+}
+
+/* Text overlay */
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.2rem;
+    padding: 1.25rem;
+    pointer-events: none;
+}
+
+.card-rank {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent);
+    font-weight: 700;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: all 250ms ease;
+}
+
+.moon-card:hover .card-rank {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-title {
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 1.15rem;
+}
+
+.card-meta {
+    margin: 0;
+    opacity: 0.8;
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.35;
+    font-style: italic;
+}
+
+/* ========================================
+   Detail page
+   ======================================== */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 150ms;
+}
+
+.back-link:hover {
+    color: #adb8ff;
+}
+
+.detail-hero {
+    width: 100%;
+    max-height: 460px;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid var(--card-border);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.detail-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    max-height: 460px;
+}
+
+.detail-body {
+    max-width: var(--max-width);
+}
+
+.detail-name {
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.rank-badge {
+    display: inline-block;
+    background: var(--crimson-glow);
+    border: 1px solid var(--crimson);
+    color: var(--crimson);
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+}
+
+.detail-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.stat-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    padding: 1.25rem;
+    backdrop-filter: blur(6px);
+    transition: border-color 200ms;
+}
+
+.stat-card:hover {
+    border-color: rgba(139, 156, 247, 0.2);
+}
+
+.stat-label {
+    margin: 0 0 0.35rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.stat-value {
+    margin: 0;
+    font-size: 1.05rem;
+    color: var(--text);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.detail-description {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.detail-description h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text);
+}
+
+.detail-description p {
+    color: var(--muted);
+    line-height: 1.75;
+    font-size: 1.05rem;
+}
+
+/* ========================================
+   404 / Error page
+   ======================================== */
+.error-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 2rem;
+}
+
+.error-card {
+    text-align: center;
+    max-width: 480px;
+}
+
+.error-code {
+    font-size: 7rem;
+    font-weight: 900;
+    margin: 0;
+    background: linear-gradient(135deg, var(--crimson), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.error-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text);
+    margin: 0.5rem 0;
+}
+
+.error-desc {
+    color: var(--muted);
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.loading-msg {
+    text-align: center;
+    margin-top: 4rem;
+    color: var(--muted);
+}
+
+/* ---- Pico overrides ---- */
+button,
+[role="button"] {
+    box-shadow: none;
+}
