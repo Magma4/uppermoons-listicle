@@ -197,6 +197,33 @@ header {
     letter-spacing: 0.5px;
 }
 
+.search-wrap {
+    margin-bottom: 1.5rem;
+}
+
+#search-input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 1rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--text);
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    outline: none;
+    transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+#search-input::placeholder {
+    color: rgba(233, 236, 255, 0.4);
+}
+
+#search-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px var(--accent-glow);
+}
+
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));

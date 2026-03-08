@@ -1,8 +1,8 @@
-# WEB103 Project 1 - *Demon Slayer • Upper Moons*
+# WEB103 Project 2 - *Demon Slayer • Upper Moons*
 
 Submitted by: **Ray**
 
-About this web app: **A Demon Slayer–themed listicle that showcases the six Upper Moon demons. Browse the card grid to see each demon's image, then click any card to view their full profile — including rank, ability type, story arc, threat level, and description. Built with Express, vanilla HTML/CSS/JS, and PicoCSS.**
+About this web app: **A Demon Slayer–themed listicle that showcases the six Upper Moon demons, backed by a PostgreSQL database hosted on Render. Browse the card grid to see each demon's image, then click any card to view their full profile — including rank, ability type, story arc, threat level, and description. Search across all attributes to filter the list in real-time.**
 
 Time spent: **5** hours
 
@@ -12,24 +12,21 @@ The following **required** functionality is completed:
 
 <!-- Make sure to check off completed functionality below -->
 - [x] **The web app uses only HTML, CSS, and JavaScript without a frontend framework**
-- [x] **The web app displays a title**
-- [x] **The web app displays at least five unique list items, each with at least three displayed attributes (such as title, text, and image)**
-- [x] **The user can click on each item in the list to see a detailed view of it, including all database fields**
-  - [x] **Each detail view should be a unique endpoint, such as `localhost:3001/uppermoons/kokushibo` and `localhost:3001/uppermoons/doma`**
-  - [x] *Note: When showing this feature in the video walkthrough, please show the unique URL for each detailed view. We will not be able to give points if we cannot see the implementation*
-- [x] **The web app serves an appropriate 404 page when no matching route is defined**
-- [x] **The web app is styled using Picocss**
+- [x] **The web app is connected to a PostgreSQL database, with an appropriately structured database table for the list items**
+  - [ ] **NOTE: Your walkthrough added to the README must include a view of your Render dashboard demonstrating that your Postgres database is available**
+  - [ ]  **NOTE: Your walkthrough added to the README must include a demonstration of your table contents. Use the psql command 'SELECT * FROM tablename;' to display your table contents.**
+
 
 The following **optional** features are implemented:
 
-- [x] The web app displays items in a unique format, such as cards rather than lists or animated list items
+- [x] The user can search for items by a specific attribute
 
 The following **additional** features are implemented:
 
 - [x] Hover effects with card lift, image zoom, and rank badge reveal animation
 - [x] Custom Bebas Neue display font for headings paired with Inter body font
-- [x] Gradient accent hero CTA button with glow effect
 - [x] Responsive 3→2→1 column grid layout
+- [x] Database reseeds automatically on every server start
 
 ## Video Walkthrough
 
@@ -41,7 +38,7 @@ GIF created with [Kap](https://getkap.co/) for macOS
 
 ## Notes
 
-The main challenge was removing an auto-augment function that was creating phantom card entries from mismatched image filenames in the public directory.
+The main challenge was switching from Render's internal database hostname to the external hostname for local development, and restructuring the backend to follow the controller/route pattern from the lab.
 
 ## License
 

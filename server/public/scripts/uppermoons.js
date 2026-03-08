@@ -1,14 +1,16 @@
-// scripts/uppermoons.js — renders the card grid on the home page
-
-const renderUpperMoons = async () => {
+const renderUpperMoons = async (searchTerm = "") => {
   const grid = document.getElementById("cards-grid");
 
   try {
-    const response = await fetch("/uppermoons");
+    const url = searchTerm
+      ? `/uppermoons?search=${encodeURIComponent(searchTerm)}`
+      : "/uppermoons";
+
+    const response = await fetch(url);
     const data = await response.json();
 
     if (!data || data.length === 0) {
-      grid.innerHTML = "<p>No Upper Moons available.</p>";
+      grid.innerHTML = "<p>No Upper Moons found.</p>";
       return;
     }
 
@@ -36,7 +38,7 @@ const renderUpperMoons = async () => {
   }
 };
 
-// Smooth-scroll "ALL UPPER MOONS" button
+
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("scroll-btn");
   if (btn) {
@@ -44,9 +46,21 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("main-content").scrollIntoView({ behavior: "smooth" });
     });
   }
+
+
+  const searchInput = document.getElementById("search-input");
+  if (searchInput) {
+    let debounceTimer;
+    searchInput.addEventListener("input", () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        renderUpperMoons(searchInput.value.trim());
+      }, 300);
+    });
+  }
 });
 
-// Only run on the home page
+
 const path = window.location.pathname;
 if (path === "/" || path === "/index.html") {
   renderUpperMoons();
